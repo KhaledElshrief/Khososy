@@ -5,15 +5,22 @@ const apiError = require("./utilts/apiError");
 const globalError = require("./middeleware/globalError");
 const mainRoute = require("./routes/mainRoute");
 const dbConnection = require("./config/dbConnetions");
+const path = require("path");
+const bodyParser = require('body-parser')
 
 
 
 
+app.use(express.static(path.join(__dirname,"uploads")))
 
- 
+app.use(bodyParser.urlencoded({ extended: false })) 
+
 dotenv.config({path:"config.env"})
 app.use(express.json())
 dbConnection();
+
+
+
 
 
  app.listen(process.env.PORT,()=>{
