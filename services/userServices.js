@@ -28,7 +28,6 @@ const reasizeImage=asyncHandler( async (req,res,next)=>{
  })
  
 
-
 const createUser=asyncHandler(async(req,res,next)=>{
     if(req.body.password){
         req.body.password=await bcrypt.hash(req.body.password,12)

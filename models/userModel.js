@@ -29,15 +29,24 @@ userSchema=mongoose.Schema({
     },
     role:{
         type:String,
-        enum:["user","admin","teacher"],
+        enum:["user","admin","teacher","Institution"],
         default:"user",    
     },
+
     active:{
         type:String,
         default:true,
+    },
+
+    address:{
+        type:String,
+
+    },
+
+    contactInfo:{
+        type:String,
     }
-
-
+    
 
 })
 

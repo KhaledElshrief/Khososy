@@ -13,5 +13,8 @@ router.route("/").post(uploadImage,reasizeImage,createUser)
 router.route("/:id").get(getSpesificUser)
 .delete(deleteUser)
 .put(updateUser)
+
 module.exports =router;
+
+
 
