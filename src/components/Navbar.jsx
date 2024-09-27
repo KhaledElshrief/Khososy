@@ -1,35 +1,65 @@
 /* eslint-disable */
-import React from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <nav className="w-full bg-white shadow-lg font-bold">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-        
         {/* Left Side: Social Media Icons */}
         <div className="flex space-x-4">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700"
+          >
             <FaFacebookF className="w-5 h-5" />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700"
+          >
             <FaInstagram className="w-5 h-5" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700"
+          >
             <FaLinkedinIn className="w-5 h-5" />
           </a>
-          <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-gray-700">
+          <a
+            href="https://whatsapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700"
+          >
             <FaWhatsapp className="w-5 h-5" />
           </a>
         </div>
 
         {/* Right Side: Menu in Arabic */}
         <ul className="flex space-x-6 text-gray-700 text-sm">
-          <li className="hover:text-black cursor-pointer">العمل كمعلم</li>
-          <li className="hover:text-black cursor-pointer">الإشتراك كستنر</li>
-          <li className="hover:text-black cursor-pointer">مين خصوصي؟</li>
           <li className="hover:text-black cursor-pointer">حسابي</li>
-          
+          <li className="hover:text-black cursor-pointer">مين خصوصي؟</li>
+          <li className="hover:text-black cursor-pointer">
+            <Link to="/subscribe">الإشتراك كستنر</Link>
+          </li>
+          <li className="hover:text-black cursor-pointer">
+            <Link to="/">العمل كمعلم</Link>
+          </li>
+
           {/* Dropdown for الطلاب */}
           <li className="relative group hover:text-black cursor-pointer ">
             للطلاب
