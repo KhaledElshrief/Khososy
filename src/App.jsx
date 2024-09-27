@@ -1,22 +1,18 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Services from './components/Services';
-import JoinUs from './components/JoinUs';
-import Courses from './components/Courses';
-import FindCenters from './components/FindCenters';
-import Footer from './components/Footer';
+import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Subscripe from "./pages/Subscripe";
+import WorkAsTeacher from "./pages/WorkAsTeacher";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Banner />
-      <Services />
-      <JoinUs />
-      <Courses />
-      <FindCenters />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<WorkAsTeacher />} />
+          <Route path="/subscribe" element={<Subscripe />} />
+          <Route />
+        </Routes>
+      </Router>
     </>
   );
 };
