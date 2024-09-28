@@ -66,7 +66,9 @@ const Navbar = () => {
             {/* Dropdown menu */}
             <ul className="absolute hidden group-hover:block right-0 mt-[-2] w-48 bg-white shadow-lg border border-gray-200 z-10 rounded-lg ">
               <li className="px-4 py-2 hover:bg-gray-100">كورسات مسجلة</li>
-              <li className="px-4 py-2 hover:bg-gray-100">النظام المصري</li>
+              <li className="px-4 py-2 hover:bg-gray-100"> 
+              <Link to="forstudents">النظام المصري</Link>
+              </li>
               <li className="px-4 py-2 hover:bg-gray-100">النظام القطري</li>
               <li className="px-4 py-2 hover:bg-gray-100">أماكن تعليمية</li>
               <li className="px-4 py-2 hover:bg-gray-100">مدونة خصوصي</li>
