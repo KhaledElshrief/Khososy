@@ -45,7 +45,10 @@ userSchema=mongoose.Schema({
 
     contactInfo:{
         type:String,
-    }
+    },
+    passwordResetCode:String,
+    passwordResetExpires:Date,
+    passwordResetVerified:Boolean,
     
 
 })

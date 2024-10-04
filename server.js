@@ -20,9 +20,6 @@ app.use(express.json())
 dbConnection();
 
 
-
-
-
  app.listen(process.env.PORT,()=>{
     console.log(`app listen on port ${process.env.PORT}`)
  })
